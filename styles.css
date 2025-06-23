@@ -1,38 +1,30 @@
-/*  your css code here. If applicable */
 body {
   font-family: Arial, sans-serif;
-  background-color: #e3f2fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  background-color: #f0f4f8;
+  padding: 40px;
+  text-align: center;
 }
 
 .container {
-  text-align: center;
+  max-width: 400px;
+  margin: auto;
   background: white;
-  padding: 20px 30px;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 button {
   padding: 10px 20px;
-  background-color: #1976d2;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0077ff;
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #1565c0;
 }
 
 #weatherData {
   margin-top: 20px;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 18px;
 }

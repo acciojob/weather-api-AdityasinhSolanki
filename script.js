@@ -1,23 +1,20 @@
-const apiKey = "YOUR_API_KEY"; // 🔁 Replace with your OpenWeatherMap API key
-const button = document.getElementById("getWeatherBtn");
-const weatherDiv = document.getElementById("weatherData");
-
-button.addEventListener("click", () => {
+document.getElementById("getWeatherBtn").addEventListener("click", () => {
+  const apiKey = "YOUR_API_KEY_HERE"; // Replace this with your actual API key
   const city = "London";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   fetch(url)
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error("Failed to fetch weather data");
+        throw new Error("Failed to fetch weather data.");
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       const weather = data.weather[0].main;
-      weatherDiv.textContent = `Current weather in London: ${weather}`;
+      document.getElementById("weatherData").textContent = `Current weather in ${city}: ${weather}`;
     })
-    .catch(error => {
-      weatherDiv.textContent = `Error: ${error.message}`;
+    .catch((error) => {
+      document.getElementById("weatherData").textContent = `Error: ${error.message}`;
     });
 });
